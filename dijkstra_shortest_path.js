@@ -55,13 +55,13 @@ function dijkstraShortestPath(s, v, nodes, edges){
     // Choose edge with minimal greedy score
     var mgs = Math.min.apply(this, gscores);
     var minedge = fedges[gscores.indexOf(mgs)];
-    var nchoosen = minedge.tail;
+    var nchosen = minedge.tail;
 
-    // Update frontier with a choosen node
-    frontier.push(nchoosen);
+    // Update frontier with a chosen node
+    frontier.push(nchosen);
 
-    // Save distance for choosen node
-    distance[nchoosen] = mgs;
+    // Save distance for chosen node
+    distance[nchosen] = mgs;
   }
 
   return distance[v];
